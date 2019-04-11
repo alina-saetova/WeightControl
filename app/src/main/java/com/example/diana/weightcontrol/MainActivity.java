@@ -17,12 +17,13 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
 import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Fragment calorCalcFragement;
+    Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment;
     FragmentTransaction fragTrans;
 
     @Override
@@ -41,7 +42,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        bFragment = new BMIFragment();
         calorCalcFragement = new CaloriesCalculatorFragment();
+        bodyFatPercentageFragment = new BodyFatPercentage();
     }
 
     @Override
@@ -84,9 +87,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_imt) {
-            // Handle the camera action
+            fragTrans.replace(R.id.fragCont, bFragment);
         } else if (id == R.id.nav_fatmass) {
-
+            fragTrans.replace(R.id.fragCont,bodyFatPercentageFragment);
         } else if (id == R.id.nav_idealweight) {
 
         } else if (id == R.id.nav_rsk) {
