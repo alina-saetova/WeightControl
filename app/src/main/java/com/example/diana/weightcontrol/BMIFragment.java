@@ -1,4 +1,4 @@
-package com.example.diana.weightcontrol.fragments;
+package com.example.diana.weightcontrol;
 
 import android.content.Context;
 import android.net.Uri;

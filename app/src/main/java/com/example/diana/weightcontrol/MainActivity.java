@@ -17,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
 import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        bFragment = new BMIFragment();
         calorCalcFragement = new CaloriesCalculatorFragment();
     }
 
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_imt) {
-            fragTrans.replace(R.id.container, bFragment);
+            fragTrans.replace(R.id.fragCont, bFragment);
         } else if (id == R.id.nav_fatmass) {
 
         } else if (id == R.id.nav_idealweight) {
