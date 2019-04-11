@@ -23,8 +23,7 @@ import java.util.TreeMap;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Fragment calorCalcFragement;
-    Fragment bFragment;
+    Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment;
     FragmentTransaction fragTrans;
 
     @Override
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity
 
         bFragment = new BMIFragment();
         calorCalcFragement = new CaloriesCalculatorFragment();
+        bodyFatPercentageFragment = new BodyFatPercentage();
     }
 
     @Override
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_imt) {
             fragTrans.replace(R.id.fragCont, bFragment);
         } else if (id == R.id.nav_fatmass) {
-
+            fragTrans.replace(R.id.fragCont,bodyFatPercentageFragment);
         } else if (id == R.id.nav_idealweight) {
 
         } else if (id == R.id.nav_rsk) {
