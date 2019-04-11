@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Fragment calorCalcFragement;
+    Fragment bFragment;
     FragmentTransaction fragTrans;
 
     @Override
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_imt) {
-            // Handle the camera action
+            fragTrans.replace(R.id.container, bFragment);
         } else if (id == R.id.nav_fatmass) {
 
         } else if (id == R.id.nav_idealweight) {
