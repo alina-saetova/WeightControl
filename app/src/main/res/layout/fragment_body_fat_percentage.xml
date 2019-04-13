@@ -12,14 +12,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:text="Пол"
+        android:text="Пол:"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radio_group"
-        android:layout_width="226dp"
-        android:layout_height="44dp"
+        android:layout_width="242dp"
+        android:layout_height="47dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
@@ -28,18 +29,18 @@
 
         <RadioButton
             android:id="@+id/radio_but_male"
-            android:layout_width="wrap_content"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_marginTop="30dp"
-            android:text="Мужчина" />
+            android:text="Женщина" />
 
         <RadioButton
             android:id="@+id/radio_but_female"
-            android:layout_width="wrap_content"
+            android:layout_width="111dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Женщина" />
+            android:text="Мужччина" />
 
     </RadioGroup>
 
@@ -49,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="Вес"
+        android:text="Вес:"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gender" />
 
@@ -70,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="Рост"
+        android:text="Рост:"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weight" />
 
@@ -79,7 +82,7 @@
         android:layout_width="211dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="33dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -91,7 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="Талия"
+        android:text="Талия:"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/height" />
 
@@ -100,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -112,7 +116,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="Бедра"
+        android:text="Бедра:"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/waist" />
 
@@ -121,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="29dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -133,7 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="Шея"
+        android:text="Шея:"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hip" />
 
@@ -142,7 +148,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -150,12 +156,15 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="496dp"
         android:layout_marginEnd="8dp"
-        android:text="Посчитать"
+        android:layout_marginBottom="40dp"
+        android:text="@string/rasschet"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -183,7 +192,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="380dp" />
+        app:layout_constraintGuide_end="378dp" />
 
 
 </android.support.constraint.ConstraintLayout>

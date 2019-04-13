@@ -11,12 +11,10 @@
         android:id="@+id/rost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="136dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/rost"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editHeightF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,12 +48,10 @@
         android:id="@+id/ves"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="8dp"
         android:text="@string/ves"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editWeightF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -253,11 +249,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="496dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/rasschet"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="378dp" />
 
 </android.support.constraint.ConstraintLayout>

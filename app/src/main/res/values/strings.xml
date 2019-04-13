@@ -18,11 +18,11 @@
     <string name="formula">Формула:</string>
     <string name="gender">Пол:</string>
     <string-array name="activities">
-        <item>отсутствие физ. активности</item>
+        <item>Отсутствие физ. активности</item>
         <item>1–3 раза в неделю</item>
         <item>3–4 раза в неделю</item>
         <item>5–7 раз в неделю</item>
-        <item>ежедневные многократные тренировки</item>
+        <item>Ежедневные многократные тренировки</item>
     </string-array>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -35,25 +35,25 @@
     <string name="measures">Журнал взвешиваний</string>
     <string name="graphic">График изменений</string>
     <string name="_16"><![CDATA[< 16]]></string>
-    <string name="vdmt">выраженный дефицит массы тела</string>
-    <string name="dmt">дефицит массы тела</string>
+    <string name="vdmt">Выраженный дефицит массы тела</string>
+    <string name="dmt">Дефицит массы тела</string>
     <string name="_16_18_5">16-18.5</string>
-    <string name="norm">норма</string>
+    <string name="norm">Норма</string>
     <string name="_18_5_25">18.5-25</string>
-    <string name="izbmt">избыточная масса тела</string>
+    <string name="izbmt">Избыточная масса тела</string>
     <string name="_25_30">25-30</string>
-    <string name="ops">ожирение первой степени</string>
+    <string name="ops">Ожирение первой степени</string>
     <string name="_30_35">30-35</string>
     <string name="_35_40">35-40</string>
-    <string name="ovs">ожирение второй степени</string>
-    <string name="ots">ожирение третьей степени</string>
+    <string name="ovs">Ожирение второй степени</string>
+    <string name="ots">Ожирение третьей степени</string>
     <string name="_40"><![CDATA[>40]]></string>
     <string name="index_massi_tela">Индекс массы тела</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="rost">рост</string>
-    <string name="rasschet">рассчитать</string>
-    <string name="ves">вес</string>
+    <string name="rost">Рост</string>
+    <string name="rasschet">Рассчитать</string>
+    <string name="ves">Вес</string>
     <string name="cm">cm</string>
 
 </resources>
