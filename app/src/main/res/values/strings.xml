@@ -49,6 +49,7 @@
     <string name="ots">ожирение третьей степени</string>
     <string name="_40"><![CDATA[>40]]></string>
     <string name="index_massi_tela">Индекс массы тела</string>
+    <string name="_22"><![CDATA[< 22%]]></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="rost">рост</string>
