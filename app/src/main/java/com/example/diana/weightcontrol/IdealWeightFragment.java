@@ -1,6 +1,8 @@
 package com.example.diana.weightcontrol;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +20,7 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
     RadioButton gender1, gender2, formula1, formula2;
     Button button;
     TextView result;
+    TextView tv_height, tv_gender, tv_formula;
 
     // удалить ?
     private static final String ARG_PARAM1 = "param1";
@@ -48,7 +51,6 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View rootView = inflater.inflate(R.layout.fragment_ideal_weight, container, false);
 
         height = rootView.findViewById(R.id.editText_height);
@@ -57,6 +59,12 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
         formula1 = rootView.findViewById(R.id.Devine);
         formula2 = rootView.findViewById(R.id.Robinson);
         result = rootView.findViewById(R.id.result);
+        tv_height = rootView.findViewById(R.id.Height);
+        tv_gender = rootView.findViewById(R.id.Gender);
+        tv_formula = rootView.findViewById(R.id.Formula);
+
+        Drawable back = getActivity().getWindow().getDecorView().getBackground();
+        rootView.setBackground(back);
 
         Button button = rootView.findViewById(R.id.button);
         button.setOnClickListener(this);
@@ -85,6 +93,26 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
                     int res = (int) (49 + 1.7 * (0.394 * value - 60));
                     result.setText("Идеальный вес " + Integer.toString(res) + " кг");
                 }
+            }
+        }
+        else {
+            if (height.getText().toString().equals("")){
+                tv_height.setTextColor(Color.parseColor("#FF0000"));
+            }
+            else {
+                tv_height.setTextColor(Color.parseColor("#808080"));
+            }
+            if (!(gender1.isChecked() || gender2.isChecked())){
+                tv_gender.setTextColor(Color.parseColor("#FF0000"));
+            }
+            else {
+                tv_gender.setTextColor(Color.parseColor("#808080"));
+            }
+            if (!(formula1.isChecked() || formula2.isChecked())){
+                tv_formula.setTextColor(Color.parseColor("#FF0000"));
+            }
+            else {
+                tv_formula.setTextColor(Color.parseColor("#808080"));
             }
         }
     }
