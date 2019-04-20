@@ -1,6 +1,7 @@
 package com.example.diana.weightcontrol;
 
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -57,6 +58,9 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
 
         button = view.findViewById(R.id.button);
         button.setOnClickListener(this);
+
+        Drawable back = getActivity().getWindow().getDecorView().getBackground();
+        view.setBackground(back);
         return view;
     }
 
