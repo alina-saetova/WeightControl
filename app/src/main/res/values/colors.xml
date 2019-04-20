@@ -9,4 +9,6 @@
     <color name="colorAppBar">#FFB300</color>
     <color name="colorGreen">#43A047</color>
     <color name="colorRed">#E53935</color>
+    <color name="colorButton">#FFA726</color>
+    <color name="colorItem">#FFB300</color>
 </resources>

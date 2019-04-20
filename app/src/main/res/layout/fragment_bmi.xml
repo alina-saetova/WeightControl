@@ -241,6 +241,7 @@
 
     <Button
         android:id="@+id/btn"
+        android:background="@drawable/btn_rectangle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -251,7 +252,7 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+ 
     <TextView
         android:id="@+id/warning"
         android:layout_width="wrap_content"
