@@ -79,19 +79,19 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
             if (gender1.isChecked()) {
                 if (formula1.isChecked()){
                     int res = (int) (50 + 2.3 * (0.394 * value - 60));
-                    result.setText("Идеальный вес " + Integer.toString(res) + " кг");
+                    result.setText("Ваш идеальный вес " + Integer.toString(res) + " кг");
                 } else {
                     int res = (int) (52 + 1.9 * (0.394 * value - 60));
-                    result.setText("Идеальный вес " + Integer.toString(res) + " кг");
+                    result.setText("Ваш идеальный вес " + Integer.toString(res) + " кг");
                 }
             }
             if (gender2.isChecked()) {
                 if (formula1.isChecked()){
                     int res = (int) (45.5 + 2.3 * (0.394 * value - 60));
-                    result.setText("Идеальный вес " + Integer.toString(res) + " кг");
+                    result.setText("Ваш идеальный вес " + Integer.toString(res) + " кг");
                 } else {
                     int res = (int) (49 + 1.7 * (0.394 * value - 60));
-                    result.setText("Идеальный вес " + Integer.toString(res) + " кг");
+                    result.setText("Ваш идеальный вес " + Integer.toString(res) + " кг");
                 }
             }
         }

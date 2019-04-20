@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="BMIFragment">
-    tools:context=".BMIFragment">
 
     <TextView
         android:id="@+id/rost"
@@ -14,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/rost"
+        android:text="@string/height"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/editHeightF"
         app:layout_constraintHorizontal_bias="0.448"
@@ -26,7 +25,7 @@
         android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number"
@@ -55,7 +54,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="168dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/ves"
+        android:text="@string/weight"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/editWeightF"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +65,7 @@
         android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="number"
@@ -82,7 +81,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="168dp"
         android:layout_marginEnd="8dp"
-        android:text="kg"
+        android:text="@string/kg"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editWeightF"
@@ -242,13 +241,12 @@
 
     <Button
         android:id="@+id/btn"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="400dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/rasschet"
+        android:text="@string/count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"

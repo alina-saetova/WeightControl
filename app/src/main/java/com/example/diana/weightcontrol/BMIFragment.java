@@ -121,13 +121,13 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        textView1.setTextColor(getResources().getColor(R.color.colorText));
-        textView2.setTextColor(getResources().getColor(R.color.colorText));
-        textView3.setTextColor(getResources().getColor(R.color.colorText));
-        textView4.setTextColor(getResources().getColor(R.color.colorText));
-        textView5.setTextColor(getResources().getColor(R.color.colorText));
-        textView6.setTextColor(getResources().getColor(R.color.colorText));
-        textView7.setTextColor(getResources().getColor(R.color.colorText));
+        textView1.setTextColor(getResources().getColor(R.color.colorText1));
+        textView2.setTextColor(getResources().getColor(R.color.colorText1));
+        textView3.setTextColor(getResources().getColor(R.color.colorText1));
+        textView4.setTextColor(getResources().getColor(R.color.colorText1));
+        textView5.setTextColor(getResources().getColor(R.color.colorText1));
+        textView6.setTextColor(getResources().getColor(R.color.colorText1));
+        textView7.setTextColor(getResources().getColor(R.color.colorText1));
 
         if (height.getText().toString().equals("")) {
             textHeight.setTextColor(Color.parseColor("#FF0000"));

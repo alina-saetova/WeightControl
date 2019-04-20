@@ -6,17 +6,17 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="age">Возраст:</string>
-    <string name="height">Рост:</string>
-    <string name="weight">Вес:</string>
+    <string name="age">Возраст</string>
+    <string name="height">Рост</string>
+    <string name="weight">Вес</string>
     <string name="activity">Активность:</string>
     <string name="fem">Женский</string>
     <string name="male">Мужской</string>
     <string name="count">Рассчитать</string>
     <string name="harris">Харриса-Бенедикта</string>
     <string name="mifflin">Миффлин-Сан Жеора</string>
-    <string name="formula">Формула:</string>
-    <string name="gender">Пол:</string>
+    <string name="formula">Формула</string>
+    <string name="gender">Пол</string>
     <string-array name="activities">
         <item>отсутствие физ. активности</item>
         <item>1–2 раза в неделю</item>
@@ -52,10 +52,12 @@
     <string name="_22"><![CDATA[< 22%]]></string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="rost">рост</string>
     <string name="rasschet">рассчитать</string>
-    <string name="ves">вес</string>
-    <string name="cm">cm</string>
     <string name="welcome">Добро пожаловать в приложение WeightControl! \n Введите свои данные</string>
+    <string name="cm">см</string>
+    <string name="kg">кг</string>
+    <string name="neck">Шея</string>
+    <string name="hip">Бедра</string>
+    <string name="waist">Талия</string>
 
 </resources>
