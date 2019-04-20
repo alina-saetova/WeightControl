@@ -17,4 +17,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="itemRecyclerBackground" parent="Theme.AppCompat.Light">
+        <item name="android:color">@color/colorItem</item>
+        <item name="android:buttonCornerRadius">32dp</item>
+    </style>
+
 </resources>
