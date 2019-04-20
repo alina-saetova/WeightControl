@@ -1,5 +1,8 @@
 package com.example.diana.weightcontrol;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
@@ -26,12 +29,28 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, idealWeightFragment;
+    public final static String MY_SETTINGS = "mysettings";
+    Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, jFragment, startFragment ;
     FragmentTransaction fragTrans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sp = getSharedPreferences(MY_SETTINGS,
+                Context.MODE_PRIVATE);
+        // проверяем, первый ли раз открывается программа
+        boolean hasVisited = sp.getBoolean("hasVisited", false);
+
+        if (!hasVisited) {
+            startActivity(new Intent(MainActivity.this, StartActivity.class));
+            SharedPreferences.Editor e = sp.edit();
+            e.putBoolean("hasVisited", true);
+            e.apply(); // не забудьте подтвердить изменения
+
+        }
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -48,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         calorCalcFragement = new CaloriesCalculatorFragment();
         bodyFatPercentageFragment = new BodyFatPercentage();
         idealWeightFragment = new IdealWeightFragment();
+        jFragment = new JournalFragment();
     }
 
     @Override
@@ -104,6 +124,7 @@ public class MainActivity extends AppCompatActivity
             fragTrans.replace(R.id.fragCont, calorCalcFragement);
         } else if (id == R.id.nav_journal) {
             getSupportActionBar().setTitle("Журнал взвешиваний");
+            fragTrans.replace(R.id.fragCont, jFragment);
         } else if (id == R.id.nav_graphic) {
             getSupportActionBar().setTitle("График изменений");
         }

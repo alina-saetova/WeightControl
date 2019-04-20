@@ -1,5 +1,10 @@
 package com.example.diana.weightcontrol;
 
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,14 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link BMIFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link BMIFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
+
+
 public class BMIFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,6 +28,9 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
     private String mParam2;
     private OnFragmentInteractionListener mListener;
 
+
+    TextView textWeight;
+    TextView textHeight;
     EditText height;
     EditText weight;
     TextView result;
@@ -38,20 +41,12 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
     TextView textView5;
     TextView textView6;
     TextView textView7;
+    TextView warning;
 
     public BMIFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BMIFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static BMIFragment newInstance(String param1, String param2) {
         BMIFragment fragment = new BMIFragment();
         Bundle args = new Bundle();
@@ -73,9 +68,11 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_bmi, container, false);
-
+        Drawable back = getActivity().getWindow().getDecorView().getBackground();
+        rootView.setBackground(back);
+        textHeight = rootView.findViewById(R.id.rost);
+        textWeight = rootView.findViewById(R.id.ves);
         height = rootView.findViewById(R.id.editHeightF);
         weight = rootView.findViewById(R.id.editWeightF);
         result = rootView.findViewById(R.id.resultF);
@@ -86,7 +83,7 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
         textView5 = rootView.findViewById(R.id.text5);
         textView6 = rootView.findViewById(R.id.text6);
         textView7 = rootView.findViewById(R.id.text7);
-
+        warning = rootView.findViewById(R.id.warning);
         Button button = rootView.findViewById(R.id.btn);
         button.setOnClickListener(this);
         return rootView;
@@ -117,16 +114,6 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
     }
 
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
@@ -142,6 +129,17 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
         textView6.setTextColor(getResources().getColor(R.color.colorText));
         textView7.setTextColor(getResources().getColor(R.color.colorText));
 
+        if (height.getText().toString().equals("")) {
+            textHeight.setTextColor(Color.parseColor("#FF0000"));
+        } else {
+            textHeight.setTextColor(Color.parseColor("#808080"));
+        }
+
+        if (weight.getText().toString().equals("")) {
+            textWeight.setTextColor(Color.parseColor("#FF0000"));
+        } else {
+            textWeight.setTextColor(Color.parseColor("#808080"));
+        }
         if (!(height.getText().toString().equals("")) && !(weight.getText().toString().equals(""))) {
             int h = Integer.parseInt(height.getText().toString());
             int w = Integer.parseInt(weight.getText().toString());
@@ -167,6 +165,8 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
             if (index >= 40) {
                 textView7.setTextColor(getResources().getColor(R.color.colorAccent));
             }
+        } else {
+            warning.setText("Проверьте введенные данные и повторите попытку");
         }
 
     }

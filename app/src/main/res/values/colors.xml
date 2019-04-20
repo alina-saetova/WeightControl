@@ -5,4 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorText">#000000</color>
     <color name="colorError">#FF0000</color>
+    <color name="colorText">#808080</color>
+    <color name="colorAppBar">#DDAC37</color>
+    <color name="colorGreen">#43A047</color>
+    <color name="colorRed">#E53935</color>
 </resources>

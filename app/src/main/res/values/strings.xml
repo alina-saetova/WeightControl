@@ -56,5 +56,6 @@
     <string name="rasschet">рассчитать</string>
     <string name="ves">вес</string>
     <string name="cm">cm</string>
+    <string name="welcome">Добро пожаловать в приложение WeightControl! \n Введите свои данные</string>
 
 </resources>
