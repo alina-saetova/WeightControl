@@ -227,7 +227,7 @@
             android:layout_centerHorizontal="true"
             android:layout_below="@id/text_result"
             android:text="Рассчитать"
-            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@drawable/btn_rectangle"
             android:layout_marginTop="25dp" />
 
         <TableLayout

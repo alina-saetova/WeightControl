@@ -140,6 +140,7 @@
         android:layout_marginBottom="8dp"
         android:onClick="onClick"
         android:text="Рассчитать"
+        android:background="@drawable/btn_rectangle"
         app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
