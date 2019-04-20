@@ -1,9 +1,9 @@
 package com.example.diana.weightcontrol;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,19 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.Fragment;
-import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.TextView;
-
-
-import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment;
+    Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, idealWeightFragment;
     FragmentTransaction fragTrans;
 
     @Override
@@ -45,6 +37,7 @@ public class MainActivity extends AppCompatActivity
         bFragment = new BMIFragment();
         calorCalcFragement = new CaloriesCalculatorFragment();
         bodyFatPercentageFragment = new BodyFatPercentage();
+        idealWeightFragment = new IdealWeightFragment();
     }
 
     @Override
@@ -91,10 +84,11 @@ public class MainActivity extends AppCompatActivity
             fragTrans.replace(R.id.fragCont, bFragment);
         } else if (id == R.id.nav_fatmass) {
             getSupportActionBar().setTitle("Процент жировой массы");
-            fragTrans.replace(R.id.fragCont,bodyFatPercentageFragment);
+            fragTrans.replace(R.id.fragCont, bodyFatPercentageFragment);
         } else if (id == R.id.nav_idealweight) {
             getSupportActionBar().setTitle("Расчет идеального веса");
 
+            fragTrans.replace(R.id.fragCont, idealWeightFragment);
         } else if (id == R.id.nav_rsk) {
             getSupportActionBar().setTitle("Расчет калорий в день");
             fragTrans.replace(R.id.fragCont, calorCalcFragement);
