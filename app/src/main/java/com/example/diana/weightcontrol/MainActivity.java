@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -15,22 +14,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.Fragment;
-import android.graphics.Color;
-import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.TextView;
-
-
-import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, idealWeightFragment;
     public final static String MY_SETTINGS = "mysettings";
-    Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, jFragment, startFragment ;
+    Fragment jFragment, startFragment ;
     FragmentTransaction fragTrans;
 
     @Override
