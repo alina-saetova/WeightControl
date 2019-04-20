@@ -108,7 +108,7 @@
             android:layout_weight="1"
             android:text="По Devine"
             android:textColor="@color/colorText1"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/Robinson"
@@ -117,7 +117,7 @@
             android:layout_weight="1"
             android:text="По Robinson"
             android:textColor="@color/colorText1"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
     </RadioGroup>
 
     <Button

@@ -168,7 +168,7 @@
             android:layout_weight="1"
             android:text="@string/fem"
             android:textColor="@color/colorText1"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/rb_male"
@@ -177,7 +177,7 @@
             android:layout_weight="1"
             android:text="@string/male"
             android:textColor="@color/colorText1"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
     </RadioGroup>
 
     <RadioGroup
@@ -198,7 +198,7 @@
             android:layout_weight="1"
             android:text="@string/harris"
             android:textColor="@color/colorText1"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/rb_mifflin"
@@ -207,7 +207,7 @@
             android:layout_weight="1"
             android:text="@string/mifflin"
             android:textColor="@color/colorText1"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
     </RadioGroup>
 
     <TextView
