@@ -76,7 +76,6 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-
         String heightS = height.getText().toString();
         String waistS = waist.getText().toString();
         String hipS = hip.getText().toString();
@@ -85,8 +84,14 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         int idGen = radioGroup.getCheckedRadioButtonId();
 
         if(!heightS.isEmpty() && !waistS.isEmpty() && !hipS.isEmpty() && !neckS.isEmpty()){
-            switch (idGen){
+            switch (idGen) {
                 case R.id.radio_but_female:
+                    row1.setTextColor(getResources().getColor(R.color.colorText));
+                    row2.setTextColor(getResources().getColor(R.color.colorText));
+                    row3.setTextColor(getResources().getColor(R.color.colorText));
+                    row4.setTextColor(getResources().getColor(R.color.colorText));
+
+                    result.setTextColor(getResources().getColor(R.color.colorText));
                     row1.setText("< 22%");
                     row2.setText("23%-34%");
                     row3.setText("35%-40%");
@@ -110,6 +115,12 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                     result.setVisibility(View.VISIBLE);
                     break;
                 case R.id.radio_but_male:
+                    row1.setTextColor(getResources().getColor(R.color.colorText));
+                    row2.setTextColor(getResources().getColor(R.color.colorText));
+                    row3.setTextColor(getResources().getColor(R.color.colorText));
+                    row4.setTextColor(getResources().getColor(R.color.colorText));
+
+                    result.setTextColor(getResources().getColor(R.color.colorText));
                     row1.setText("< 8%");
                     row2.setText("9%-20%");
                     row3.setText("21%-25%");
