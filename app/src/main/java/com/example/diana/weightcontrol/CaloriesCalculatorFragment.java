@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.graphics.drawable.*;
 
 
 import java.util.TreeMap;
@@ -51,7 +52,8 @@ public class CaloriesCalculatorFragment extends Fragment implements View.OnClick
         tvweight = view.findViewById(R.id.tv_weight);
         tvformula = view.findViewById(R.id.tv_formula);
 
-
+        Drawable back = getActivity().getWindow().getDecorView().getBackground();
+        view.setBackground(back);
         Button count = view.findViewById(R.id.btn_count);
         count.setOnClickListener(this);
         return view;
