@@ -1,6 +1,7 @@
 package com.example.diana.weightcontrol;
 
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -38,6 +39,8 @@ public class JournalFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_journal, container, false);
         ButterKnife.bind(getActivity());
+        Drawable back = getActivity().getWindow().getDecorView().getBackground();
+        rootView.setBackground(back);
         recyclerView = rootView.findViewById(R.id.recyclerview);
         Button buttonAdd = rootView.findViewById(R.id.add);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
