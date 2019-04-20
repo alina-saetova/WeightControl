@@ -2,9 +2,8 @@ package com.example.diana.weightcontrol;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,13 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
-
-import static com.example.diana.weightcontrol.R.id.cancel_action;
-import static com.example.diana.weightcontrol.R.id.radio_but_female;
-import static com.example.diana.weightcontrol.R.id.radio_but_male;
-import static com.example.diana.weightcontrol.R.id.visible;
 
 
 public class BodyFatPercentage extends Fragment implements View.OnClickListener {
