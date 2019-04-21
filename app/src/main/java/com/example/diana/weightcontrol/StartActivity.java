@@ -29,6 +29,7 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+        getSupportActionBar().hide();
         Button button = findViewById(R.id.start_btn);
         mSettings = getSharedPreferences(MY_SETTINGS,
                 Context.MODE_PRIVATE);

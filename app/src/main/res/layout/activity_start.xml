@@ -4,20 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
-
+    tools:context=".StartActivity"
+    android:background="@drawable/start_background1">
 
 
     <Button
         android:id="@+id/start_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="212dp"
+        android:layout_height="53dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="496dp"
         android:layout_marginEnd="8dp"
-        android:text="Продолжить"
         android:background="@drawable/btn_rectangle"
+        android:fontFamily="@font/arbutus"
+        android:text="continue"
+        android:textAllCaps="true"
+        android:textColor="#A3362C2C"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,11 +30,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
-        android:hint="Вес"
+        android:hint="Weight"
         android:inputType="numberDecimal"
+        android:textColorHint="#A3362C2C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -40,25 +46,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
-        android:hint="Рост"
+        android:hint="Height"
         android:inputType="numberDecimal"
+        android:textColorHint="#A3362C2C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reg_weight" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="406dp"
+        android:layout_height="115dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="204dp"
         android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poller_one"
         android:gravity="center"
         android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#F3E5F5"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

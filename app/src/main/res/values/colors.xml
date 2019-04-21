@@ -6,9 +6,10 @@
     <color name="colorText">#000000</color>
     <color name="colorError">#FF0000</color>
     <color name="colorText1">#808080</color>
-    <color name="colorAppBar">#FFB300</color>
-    <color name="colorGreen">#43A047</color>
+    <color name="colorAppBar">#fdcc10</color>
+    <color name="colorGreen">#49CA4E</color>
     <color name="colorRed">#E53935</color>
-    <color name="colorButton">#FFA726</color>
-    <color name="colorItem">#FFB300</color>
+    <color name="colorButton">#FFA400</color>
+    <color name="colorItem">#F7CB60</color>
+    <color name="colorEdittext">#F0E2B8</color>
 </resources>

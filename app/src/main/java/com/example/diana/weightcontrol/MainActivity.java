@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
 
     Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, idealWeightFragment;
     public final static String MY_SETTINGS = "mysettings";
-    Fragment jFragment, startFragment ;
+    Fragment jFragment;
     FragmentTransaction fragTrans;
 
     @Override
@@ -29,14 +29,12 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         SharedPreferences sp = getSharedPreferences(MY_SETTINGS,
                 Context.MODE_PRIVATE);
-        // проверяем, первый ли раз открывается программа
         boolean hasVisited = sp.getBoolean("hasVisited", false);
-
         if (!hasVisited) {
             startActivity(new Intent(MainActivity.this, StartActivity.class));
             SharedPreferences.Editor e = sp.edit();
             e.putBoolean("hasVisited", true);
-            e.apply(); // не забудьте подтвердить изменения
+            e.apply();
 
         }
 
