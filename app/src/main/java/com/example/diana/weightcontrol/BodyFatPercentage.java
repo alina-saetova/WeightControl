@@ -1,6 +1,6 @@
 package com.example.diana.weightcontrol;
 
-import android.graphics.Color;
+
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -83,12 +83,12 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         if(!heightS.isEmpty() && !waistS.isEmpty() && !hipS.isEmpty() && !neckS.isEmpty()){
             switch (idGen) {
                 case R.id.radio_but_female:
-                    row1.setTextColor(getResources().getColor(R.color.colorText));
-                    row2.setTextColor(getResources().getColor(R.color.colorText));
-                    row3.setTextColor(getResources().getColor(R.color.colorText));
-                    row4.setTextColor(getResources().getColor(R.color.colorText));
+                    row1.setTextColor(getResources().getColor(R.color.colorText1));
+                    row2.setTextColor(getResources().getColor(R.color.colorText1));
+                    row3.setTextColor(getResources().getColor(R.color.colorText1));
+                    row4.setTextColor(getResources().getColor(R.color.colorText1));
 
-                    result.setTextColor(getResources().getColor(R.color.colorText));
+                    result.setTextColor(getResources().getColor(R.color.colorText1));
                     row1.setText("< 22%");
                     row2.setText("23%-34%");
                     row3.setText("35%-40%");
@@ -112,12 +112,12 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                     result.setVisibility(View.VISIBLE);
                     break;
                 case R.id.radio_but_male:
-                    row1.setTextColor(getResources().getColor(R.color.colorText));
-                    row2.setTextColor(getResources().getColor(R.color.colorText));
-                    row3.setTextColor(getResources().getColor(R.color.colorText));
-                    row4.setTextColor(getResources().getColor(R.color.colorText));
+                    row1.setTextColor(getResources().getColor(R.color.colorText1));
+                    row2.setTextColor(getResources().getColor(R.color.colorText1));
+                    row3.setTextColor(getResources().getColor(R.color.colorText1));
+                    row4.setTextColor(getResources().getColor(R.color.colorText1));
 
-                    result.setTextColor(getResources().getColor(R.color.colorText));
+                    result.setTextColor(getResources().getColor(R.color.colorText1));
                     row1.setText("< 8%");
                     row2.setText("9%-20%");
                     row3.setText("21%-25%");
@@ -144,7 +144,6 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         }
         else {
             result.setText("Проверьте введенные данные и повторите попытку");
-            result.setTextColor(Color.RED);
             result.setVisibility(View.VISIBLE);
         }
     }
