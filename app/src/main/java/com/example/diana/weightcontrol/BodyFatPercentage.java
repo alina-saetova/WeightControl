@@ -51,9 +51,6 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
 
         button = view.findViewById(R.id.button);
         button.setOnClickListener(this);
-
-        Drawable back = getActivity().getWindow().getDecorView().getBackground();
-        view.setBackground(back);
         return view;
     }
 

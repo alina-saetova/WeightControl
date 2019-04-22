@@ -63,9 +63,6 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
         tv_gender = rootView.findViewById(R.id.Gender);
         tv_formula = rootView.findViewById(R.id.Formula);
 
-        Drawable back = getActivity().getWindow().getDecorView().getBackground();
-        rootView.setBackground(back);
-
         Button button = rootView.findViewById(R.id.button);
         button.setOnClickListener(this);
 
