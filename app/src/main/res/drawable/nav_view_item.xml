@@ -26,7 +26,7 @@
                 android:left="16dp"
                 android:right="16dp"
                 android:top="16dp"/>
-            <solid android:color="@color/colorEdittext"/>
+            <solid android:color="@color/colorMenu"/>
             <size android:height="8dp"/>
         </shape>
     </item>
