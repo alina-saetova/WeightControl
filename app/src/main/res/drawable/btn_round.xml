@@ -2,28 +2,28 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true" >
         <shape android:shape="oval"  >
-            <corners android:bottomRightRadius="180dip"
-                android:bottomLeftRadius="180dip"
-                android:topRightRadius="180dip"
-                android:topLeftRadius="180dip"/>
+            <corners android:bottomRightRadius="360dip"
+                android:bottomLeftRadius="360dip"
+                android:topRightRadius="360dip"
+                android:topLeftRadius="360dip"/>
             <solid android:color="@color/colorButton"/>
         </shape>
     </item>
     <item android:state_focused="true">
         <shape android:shape="oval"  >
-            <corners android:bottomRightRadius="180dip"
-                android:bottomLeftRadius="180dip"
-                android:topRightRadius="180dip"
-                android:topLeftRadius="180dip"/>
+            <corners android:bottomRightRadius="360dip"
+                android:bottomLeftRadius="360dip"
+                android:topRightRadius="360dip"
+                android:topLeftRadius="360dip"/>
             <solid android:color="@color/colorBut"/>
         </shape>
     </item>
     <item >
         <shape android:shape="oval"  >
-            <corners android:bottomRightRadius="180dip"
-                android:bottomLeftRadius="180dip"
-                android:topRightRadius="180dip"
-                android:topLeftRadius="180dip"/>
+            <corners android:bottomRightRadius="360dip"
+                android:bottomLeftRadius="360dip"
+                android:topRightRadius="360dip"
+                android:topLeftRadius="360dip"/>
             <solid android:color="@color/colorBut"/>
         </shape>
     </item>

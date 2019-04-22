@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JournalFragment">
+    tools:context=".JournalFragment"
+    android:background="@drawable/journal_background">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview"
@@ -20,14 +21,15 @@
 
     <Button
         android:id="@+id/add"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/btn_round"
         android:text="+"
-        android:textColor="@color/ic_msr"
-        android:textSize="24sp"
+        android:fontFamily="@font/concert_one"
+        android:textColor="@color/colorEdittext"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

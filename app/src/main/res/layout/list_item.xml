@@ -25,8 +25,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textColor="@color/colorEdittext"
+            android:textSize="20sp"
+            android:fontFamily="@font/coiny"/>
 
         <TextView
             android:id="@+id/weightField"
@@ -35,8 +36,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:textColor="@color/colorEdittext"
+            android:textSize="20sp"
+            android:fontFamily="@font/coiny"/>
 
         <TextView
             android:id="@+id/weightChange"
@@ -44,8 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:textSize="16sp"
-            android:textAlignment="center"/>
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/coiny"/>
 
     </LinearLayout>
 

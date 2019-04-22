@@ -115,22 +115,22 @@
         android:textColor="@color/textNav"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/sp_active"
-        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
 
     <Spinner
         android:id="@+id/sp_active"
-        android:layout_width="190dp"
-        android:layout_height="57dp"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/edittext_rectangle"
         android:entries="@array/activities"
         android:theme="@style/SpinnerStyle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.665"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_weight" />
 
