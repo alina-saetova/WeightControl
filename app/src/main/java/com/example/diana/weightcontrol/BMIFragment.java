@@ -69,8 +69,6 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.fragment_bmi, container, false);
-        Drawable back = getActivity().getWindow().getDecorView().getBackground();
-        rootView.setBackground(back);
         textHeight = rootView.findViewById(R.id.rost);
         textWeight = rootView.findViewById(R.id.ves);
         height = rootView.findViewById(R.id.editHeightF);
