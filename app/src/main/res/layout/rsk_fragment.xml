@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/calc_background">
 
     <EditText
         android:id="@+id/et_height"
-        android:layout_width="wrap_content"
+        android:layout_width="185dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_age" />
 
     <EditText
         android:id="@+id/et_weight"
-        android:layout_width="wrap_content"
+        android:layout_width="185dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_height" />
 
@@ -35,11 +43,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/gender"
-        android:textSize="18sp"
+        android:textColor="@color/textNav"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup_gender"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,39 +59,47 @@
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/age"
-        android:textSize="18sp"
+        android:textColor="@color/textNav"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/et_age"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_gender" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/height"
-        android:textSize="18sp"
+        android:textColor="@color/textNav"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/et_height"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/weight"
-        android:textColor="@color/colorText1"
+        android:textColor="@color/textNav"
         android:textColorLink="@color/colorText1"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/et_weight"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_height" />
 
@@ -89,23 +108,29 @@
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/activity"
-        android:textSize="18sp"
+        android:textColor="@color/textNav"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/sp_active"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
 
     <Spinner
         android:id="@+id/sp_active"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="57dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:entries="@array/activities"
+        style="spi"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_weight" />
 
@@ -114,12 +139,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/count"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/btn_rectangle"
+        android:fontFamily="@font/rubik_mono_one"
+        android:text="@string/count"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup_formula" />
 
@@ -128,25 +155,31 @@
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/formula"
-        android:textSize="18sp"
+        android:textColor="@color/textNav"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup_formula"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_active" />
 
     <EditText
         android:id="@+id/et_age"
         style="@style/Widget.AppCompat.EditText"
-        android:layout_width="wrap_content"
+        android:layout_width="185dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup_gender" />
 
@@ -154,19 +187,22 @@
         android:id="@+id/radioGroup_gender"
         android:layout_width="235dp"
         android:layout_height="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/rb_female"
-            android:layout_width="114dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/rubik_mono_one"
             android:text="@string/fem"
-            android:textColor="@color/colorText1"
+            android:buttonTint="@color/textNav"
+            android:textColor="@color/textNav"
             android:textSize="14sp" />
 
         <RadioButton
@@ -174,8 +210,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/rubik_mono_one"
             android:text="@string/male"
-            android:textColor="@color/colorText1"
+            android:buttonTint="@color/textNav"
+            android:textColor="@color/textNav"
             android:textSize="14sp" />
     </RadioGroup>
 
@@ -184,9 +222,10 @@
         android:layout_width="220dp"
         android:layout_height="84dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_active">
 
@@ -195,8 +234,10 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/rubik_mono_one"
+            android:buttonTint="@color/textNav"
             android:text="@string/harris"
-            android:textColor="@color/colorText1"
+            android:textColor="@color/textNav"
             android:textSize="14sp" />
 
         <RadioButton
@@ -204,55 +245,32 @@
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/rubik_mono_one"
+            android:buttonTint="@color/textNav"
             android:text="@string/mifflin"
-            android:textColor="@color/colorText1"
+            android:textColor="@color/textNav"
             android:textSize="14sp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/tv_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="277dp"
+        android:layout_height="36dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:gravity="center"
+        android:textColor="@color/textNav"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_count"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.constraint.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/cm"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/et_age"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/kg"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/et_weight"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
 </android.support.constraint.ConstraintLayout>

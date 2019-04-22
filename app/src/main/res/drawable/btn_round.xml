@@ -15,7 +15,7 @@
                 android:bottomLeftRadius="180dip"
                 android:topRightRadius="180dip"
                 android:topLeftRadius="180dip"/>
-            <solid android:color="@color/colorAppBar"/>
+            <solid android:color="@color/colorBut"/>
         </shape>
     </item>
     <item >
@@ -24,7 +24,7 @@
                 android:bottomLeftRadius="180dip"
                 android:topRightRadius="180dip"
                 android:topLeftRadius="180dip"/>
-            <solid android:color="@color/colorAppBar"/>
+            <solid android:color="@color/colorBut"/>
         </shape>
     </item>
 </selector>

@@ -17,4 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:color">@color/colorEdittext</item>
+        <item name="android:fontFamily">@font/rubik_mono_one</item>
+        <item name="android:paddingTop">64dp</item>
+    </style>
+
+    <style name="SpinnerStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/rubik_mono_one</item>
+    </style>
 </resources>

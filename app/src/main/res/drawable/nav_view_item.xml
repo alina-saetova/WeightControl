@@ -7,7 +7,7 @@
                 android:left="16dp"
                 android:right="16dp"
                 android:top="16dp"/>
-            <solid android:color="@color/colorButton"/>
+            <solid android:color="@color/colorItem" />
         </shape>
     </item>
     <item android:state_focused="true">
@@ -26,7 +26,8 @@
                 android:left="16dp"
                 android:right="16dp"
                 android:top="16dp"/>
-            <solid android:color="@color/colorBut"/>
+            <solid android:color="@color/colorEdittext"/>
+            <size android:height="8dp"/>
         </shape>
     </item>
 </selector>
