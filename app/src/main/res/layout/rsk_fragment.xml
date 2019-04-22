@@ -130,7 +130,7 @@
         android:entries="@array/activities"
         android:theme="@style/SpinnerStyle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_weight" />
 
@@ -199,9 +199,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:buttonTint="@color/textNav"
             android:fontFamily="@font/rubik_mono_one"
             android:text="@string/fem"
-            android:buttonTint="@color/textNav"
             android:textColor="@color/textNav"
             android:textSize="14sp" />
 
@@ -210,9 +210,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/textNav"
             android:fontFamily="@font/rubik_mono_one"
             android:text="@string/male"
-            android:buttonTint="@color/textNav"
             android:textColor="@color/textNav"
             android:textSize="14sp" />
     </RadioGroup>
@@ -234,8 +234,8 @@
             android:layout_width="189dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/rubik_mono_one"
             android:buttonTint="@color/textNav"
+            android:fontFamily="@font/rubik_mono_one"
             android:text="@string/harris"
             android:textColor="@color/textNav"
             android:textSize="14sp" />
@@ -245,8 +245,8 @@
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/rubik_mono_one"
             android:buttonTint="@color/textNav"
+            android:fontFamily="@font/rubik_mono_one"
             android:text="@string/mifflin"
             android:textColor="@color/textNav"
             android:textSize="14sp" />

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/calc_background"
     tools:context="BMIFragment">
 
     <TextView
@@ -13,10 +14,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/height"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/editHeightF"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,8 +30,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="number"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,25 +46,30 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/cm"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toEndOf="@+id/editHeightF"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ves"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/weight"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/editWeightF"
+        app:layout_constraintHorizontal_bias="0.67"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rost" />
 
     <EditText
         android:id="@+id/editWeightF"
@@ -67,8 +78,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="number"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editHeightF" />
@@ -79,13 +93,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/kg"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toEndOf="@+id/editWeightF"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/sm" />
 
 
     <TextView
@@ -95,6 +112,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="256dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -106,22 +125,23 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultF" />
 
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/tableLayout"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editWeightF"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/editWeightF">
 
 
         <TableRow>
@@ -131,29 +151,41 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/vdmt" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/vdmt"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_16" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_16"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:id="@+id/text2"
-                android:layout_width="99dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/dmt" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/dmt"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_16_18_5" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_16_18_5"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
@@ -163,13 +195,19 @@
                 android:layout_width="107dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/norm" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/norm"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_18_5_25" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_18_5_25"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
@@ -179,13 +217,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/izbmt" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/izbmt"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_25_30" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_25_30"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
@@ -195,13 +239,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/ops" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/ops"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_30_35" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_30_35"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
@@ -211,13 +261,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/ovs" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/ovs"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="56dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_35_40" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_35_40"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
@@ -227,13 +283,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/ots" />
+                android:fontFamily="@font/rubik_mono_one"
+                android:text="@string/ots"
+                android:textColor="@color/textNav"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/_40" />
+                android:fontFamily="@font/coiny"
+                android:text="@string/_40"
+                android:textColor="@color/textNav"
+                android:textSize="14sp" />
         </TableRow>
 
 
@@ -241,18 +303,20 @@
 
     <Button
         android:id="@+id/btn"
-        android:background="@drawable/btn_rectangle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_rectangle"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/count"
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
- 
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
     <TextView
         android:id="@+id/warning"
         android:layout_width="wrap_content"
@@ -260,7 +324,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text=""
+        android:textColor="@color/textNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn" />
