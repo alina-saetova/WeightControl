@@ -25,7 +25,7 @@
     </style>
 
     <style name="SpinnerStyle">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:fontFamily">@font/rubik_mono_one</item>
     </style>
 </resources>

@@ -128,7 +128,7 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/edittext_rectangle"
         android:entries="@array/activities"
-        style="spi"
+        android:theme="@style/SpinnerStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
