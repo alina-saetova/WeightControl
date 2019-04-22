@@ -35,8 +35,8 @@
     <string name="weightcontrol">Контроль веса</string>
     <string name="measures">Журнал взвешиваний</string>
     <string name="graphic">График изменений</string>
-    <string name="_16"><![CDATA[< 16]]></string>
-    <string name="vdmt">выраженный дефицит массы тела</string>
+    <string name="_16"><![CDATA[ <16]]></string>
+    <string name="vdmt">выраженный дефицит массы</string>
     <string name="dmt">дефицит массы тела</string>
     <string name="_16_18_5">16-18.5</string>
     <string name="norm">норма</string>

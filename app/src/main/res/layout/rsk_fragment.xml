@@ -199,9 +199,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:buttonTint="@color/textNav"
             android:fontFamily="@font/rubik_mono_one"
             android:text="@string/fem"
-            android:buttonTint="@color/textNav"
             android:textColor="@color/textNav"
             android:textSize="14sp" />
 
@@ -210,9 +210,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/textNav"
             android:fontFamily="@font/rubik_mono_one"
             android:text="@string/male"
-            android:buttonTint="@color/textNav"
             android:textColor="@color/textNav"
             android:textSize="14sp" />
     </RadioGroup>
