@@ -39,7 +39,7 @@
         android:hint="вес"
         android:inputType="numberDecimal"
         android:textColorHint="#A3362C2C"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:textColorHint="#A3362C2C"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reg_weight" />
