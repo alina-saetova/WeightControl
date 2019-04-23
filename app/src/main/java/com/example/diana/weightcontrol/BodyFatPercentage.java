@@ -1,6 +1,8 @@
 package com.example.diana.weightcontrol;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -51,6 +53,10 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
 
         button = view.findViewById(R.id.button);
         button.setOnClickListener(this);
+        SharedPreferences sp = getContext().getSharedPreferences("firstSettings",
+                Context.MODE_PRIVATE);
+        weight.setText(sp.getString("weight", ""));
+        height.setText(sp.getString("height", ""));
         return view;
     }
 

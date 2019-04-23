@@ -1,6 +1,7 @@
 package com.example.diana.weightcontrol;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -62,7 +63,9 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
         tv_height = rootView.findViewById(R.id.Height);
         tv_gender = rootView.findViewById(R.id.Gender);
         tv_formula = rootView.findViewById(R.id.Formula);
-
+        SharedPreferences sp = getContext().getSharedPreferences("firstSettings",
+                Context.MODE_PRIVATE);
+        height.setText(sp.getString("height", ""));
         Button button = rootView.findViewById(R.id.button);
         button.setOnClickListener(this);
 
