@@ -5,39 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddFragment"
-    android:background="@drawable/start_background1">
+    android:background="@drawable/add_background">
 
     <!-- TODO: Update blank fragment layout -->
 
     <EditText
         android:id="@+id/add_weight"
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
         android:background="@drawable/edittext_rectangle"
+        android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
+        android:hint="вес"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/textNav"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.085" />
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
-        android:text="добавить"
         android:background="@drawable/btn_rectangle"
         android:fontFamily="@font/rubik_mono_one"
+        android:text="добавить"
         android:textColor="@color/textNav"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_weight" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:text="введите свои данные"
+        android:textColor="#F3E5F5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/welcome2" />
 
 </android.support.constraint.ConstraintLayout>
