@@ -21,18 +21,13 @@ import static com.example.diana.weightcontrol.MainActivity.MY_SETTINGS;
 
 public class StartActivity extends AppCompatActivity {
 
-    public final static String MY_WEIGHT = "weight";
-    public final static String MY_HEIGHT = "height";
-    private SharedPreferences mSettings;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         getSupportActionBar().hide();
         Button button = findViewById(R.id.start_btn);
-        mSettings = getSharedPreferences(MY_SETTINGS,
-                Context.MODE_PRIVATE);
+
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#DDAC37")));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,11 +35,12 @@ public class StartActivity extends AppCompatActivity {
                 EditText weight = findViewById(R.id.reg_weight);
                 EditText height = findViewById(R.id.reg_height);
                 if (!weight.getText().toString().isEmpty() && !height.getText().toString().isEmpty()) {
-                    SharedPreferences.Editor editor = mSettings.edit();
-                    editor.putString(MY_WEIGHT, weight.getText().toString());
-                    editor.putString(MY_HEIGHT, height.getText().toString());
+                    SharedPreferences sp = getSharedPreferences("firstSettings",
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("weight", weight.getText().toString());
+                    editor.putString("height", height.getText().toString());
                     editor.apply();
-
                     DataBaseHelper databaseHelper = App.getInstance().getDatabaseInstance();
                     Note note = new Note();
                     DateFormat df = new SimpleDateFormat("dd.MM.yyyy");

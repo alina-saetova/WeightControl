@@ -26,6 +26,7 @@
 
     <style name="SpinnerStyle">
         <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/textNav</item>
         <item name="android:fontFamily">@font/rubik_mono_one</item>
     </style>
     <style name="titleStyle">

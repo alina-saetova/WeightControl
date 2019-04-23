@@ -1,5 +1,7 @@
 package com.example.diana.weightcontrol;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -53,7 +55,10 @@ public class CaloriesCalculatorFragment extends Fragment implements View.OnClick
         tvweight = view.findViewById(R.id.tv_weight);
         tvformula = view.findViewById(R.id.tv_formula);
         tvactivity = view.findViewById(R.id.tv_active);
-
+        SharedPreferences sp = getContext().getSharedPreferences("firstSettings",
+                Context.MODE_PRIVATE);
+        etWeight.setText(sp.getString("weight", ""));
+        etHeight.setText(sp.getString("height", ""));
 //        Drawable back = getActivity().getWindow().getDecorView().getBackground();
 //        view.setBackground(back);
         Button count = view.findViewById(R.id.btn_count);
@@ -81,37 +86,37 @@ public class CaloriesCalculatorFragment extends Fragment implements View.OnClick
             tvage.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
         else {
-            tvage.setTextColor(Color.parseColor("#474744"));
+            tvage.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (height.isEmpty()) {
             tvheight.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
         else {
-            tvheight.setTextColor(Color.parseColor("#474744"));
+            tvheight.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (weight.isEmpty()) {
             tvweight.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
         else {
-            tvweight.setTextColor(Color.parseColor("#474744"));
+            tvweight.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (idG == -1) {
             tvgender.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
         else {
-            tvgender.setTextColor(Color.parseColor("#474744"));
+            tvgender.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (idF == -1) {
             tvformula.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
         else {
-            tvformula.setTextColor(Color.parseColor("#474744"));
+            tvformula.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (activity.isEmpty()) {
             tvactivity.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
         else {
-            tvactivity.setTextColor(Color.parseColor("#474744"));
+            tvactivity.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (!age.isEmpty() && !height.isEmpty() && !weight.isEmpty() && idF != 1 && idG != 1 && !activity.isEmpty()) {
             switch (idG) {
