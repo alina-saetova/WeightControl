@@ -12,24 +12,28 @@
         android:id="@+id/Gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/gender"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/RadioGroup1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/RadioGroup1"
-        android:layout_width="198dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="212dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="76dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Gender"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
@@ -37,44 +41,53 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/rubik_mono_one"
             android:text="@string/male"
-            android:textColor="@color/colorText1"
-            android:textSize="14sp" />
+            android:textColor="@color/textNav"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="@font/rubik_mono_one"
             android:text="@string/fem"
-            android:textColor="@color/colorText1"
-            android:textSize="14sp" />
+            android:textColor="@color/textNav"
+            android:textSize="12sp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/Height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="300dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/height"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText_height"
-        android:layout_width="162dp"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edittext_rectangle"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="number"
+        android:textColor="@color/colorText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,24 +95,28 @@
         android:id="@+id/Formula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/formula"
+        android:textColor="@color/textNav"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="223dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="232dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="34dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Formula"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
@@ -107,18 +124,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="По Devine"
-            android:textColor="@color/colorText1"
-            android:textSize="14sp" />
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Devine"
+            android:textColor="@color/textNav"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/Robinson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="По Robinson"
-            android:textColor="@color/colorText1"
-            android:textSize="14sp" />
+            android:fontFamily="@font/rubik_mono_one"
+            android:text="Robinson"
+            android:textColor="@color/textNav"
+            android:textSize="12sp" />
     </RadioGroup>
 
     <Button
@@ -126,11 +145,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="246dp"
         android:background="@drawable/btn_rectangle"
+        android:fontFamily="@font/rubik_mono_one"
         android:onClick="onClick"
         android:text="@string/count"
+        android:textColor="@color/textNav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -140,9 +163,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
-        android:textSize="14sp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textColor="@color/textNav"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
@@ -152,11 +177,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="@string/cm"
-        android:textSize="16sp"
+        android:textColor="@color/textNav"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toEndOf="@+id/editText_height"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
