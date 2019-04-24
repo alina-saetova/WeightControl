@@ -83,6 +83,10 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
         textView7 = rootView.findViewById(R.id.text7);
         warning = rootView.findViewById(R.id.warning);
         Button button = rootView.findViewById(R.id.btn);
+        SharedPreferences sp = getContext().getSharedPreferences("firstSettings",
+                Context.MODE_PRIVATE);
+        weight.setText(sp.getString("weight", ""));
+        height.setText(sp.getString("height", ""));
         button.setOnClickListener(this);
         return rootView;
     }
@@ -119,49 +123,56 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        textView1.setTextColor(getResources().getColor(R.color.colorText1));
-        textView2.setTextColor(getResources().getColor(R.color.colorText1));
-        textView3.setTextColor(getResources().getColor(R.color.colorText1));
-        textView4.setTextColor(getResources().getColor(R.color.colorText1));
-        textView5.setTextColor(getResources().getColor(R.color.colorText1));
-        textView6.setTextColor(getResources().getColor(R.color.colorText1));
-        textView7.setTextColor(getResources().getColor(R.color.colorText1));
+        textView1.setTextColor(getResources().getColor(R.color.textNav));
+        textView2.setTextColor(getResources().getColor(R.color.textNav));
+        textView3.setTextColor(getResources().getColor(R.color.textNav));
+        textView4.setTextColor(getResources().getColor(R.color.textNav));
+        textView5.setTextColor(getResources().getColor(R.color.textNav));
+        textView6.setTextColor(getResources().getColor(R.color.textNav));
+        textView7.setTextColor(getResources().getColor(R.color.textNav));
 
         if (height.getText().toString().equals("")) {
-            textHeight.setTextColor(Color.parseColor("#FF0000"));
+            textHeight.setTextColor(Color.parseColor("#FFEC5F5F"));
         } else {
-            textHeight.setTextColor(Color.parseColor("#808080"));
+            textHeight.setTextColor(Color.parseColor("#A3362C2C"));
         }
 
         if (weight.getText().toString().equals("")) {
-            textWeight.setTextColor(Color.parseColor("#FF0000"));
+            textWeight.setTextColor(Color.parseColor("#FFEC5F5F"));
         } else {
-            textWeight.setTextColor(Color.parseColor("#808080"));
+            textWeight.setTextColor(Color.parseColor("#A3362C2C"));
         }
         if (!(height.getText().toString().equals("")) && !(weight.getText().toString().equals(""))) {
             int h = Integer.parseInt(height.getText().toString());
             int w = Integer.parseInt(weight.getText().toString());
             int index = ((w * 100 * 100) / (h * h));
             if (index < 16) {
-                textView1.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView1.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
             if ((index >= 16) && (index < 18.5)) {
-                textView2.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView2.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
             if ((index >= 18.5) && (index < 25)) {
-                textView3.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView3.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
             if ((index >= 25) && (index < 30)) {
-                textView4.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView4.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
             if ((index >= 30) && (index < 35)) {
-                textView5.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView5.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
             if ((index >= 35) && (index < 40)) {
-                textView6.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView6.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
             if (index >= 40) {
-                textView7.setTextColor(getResources().getColor(R.color.colorAccent));
+                textView7.setTextColor(getResources().getColor(R.color.colorBmi));
+                warning.setText("");
             }
         } else {
             warning.setText("Проверьте введенные данные и повторите попытку");
