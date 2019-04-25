@@ -78,6 +78,7 @@
             android:layout_below="@id/radio_group"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:textColor="@color/textNav"
             android:background="@drawable/edittext_rectangle"
             android:ems="7"
             android:fontFamily="@font/rubik_mono_one"
@@ -117,6 +118,7 @@
             android:layout_below="@id/editText_weight"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:textColor="@color/textNav"
             android:background="@drawable/edittext_rectangle"
             android:ems="7"
             android:fontFamily="@font/rubik_mono_one"
@@ -158,6 +160,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/edittext_rectangle"
             android:ems="7"
+            android:textColor="@color/textNav"
             android:fontFamily="@font/rubik_mono_one"
             android:inputType="number|numberDecimal" />
 
@@ -197,6 +200,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/edittext_rectangle"
             android:ems="7"
+            android:textColor="@color/textNav"
             android:fontFamily="@font/rubik_mono_one"
             android:inputType="number|numberDecimal" />
 
@@ -237,6 +241,7 @@
             android:background="@drawable/edittext_rectangle"
             android:ems="7"
             android:fontFamily="@font/rubik_mono_one"
+            android:textColor="@color/textNav"
             android:inputType="number|numberDecimal" />
 
         <TextView

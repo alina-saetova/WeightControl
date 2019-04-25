@@ -167,7 +167,7 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                     table.setVisibility(View.VISIBLE);
                     percent = percentFatMale(Integer.parseInt(heightS), Integer.parseInt(waistS),
                             Integer.parseInt(neckS));
-                    result.setText("Процент жира в организме: " + String.valueOf(percent) + "%");
+                    result.setText("Процент жира в организме:\n " + String.valueOf(percent) + "%");
                     if (percent <= 8.0) {
                         row1.setTextColor(getResources().getColor(R.color.colorAccent));
                     }
