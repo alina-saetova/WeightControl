@@ -73,6 +73,24 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
     }
 
     public void onClick(View view){
+        if (height.getText().toString().equals("")){
+            tv_height.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tv_height.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if (!(gender1.isChecked() || gender2.isChecked())){
+            tv_gender.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tv_gender.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if (!(formula1.isChecked() || formula2.isChecked())){
+            tv_formula.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tv_formula.setTextColor(Color.parseColor("#A3362C2C"));
+        }
         if (!(height.getText().toString().equals("")) && (gender1.isChecked() || gender2.isChecked()) && (formula1.isChecked() || formula2.isChecked())){
 
             int value = Integer.parseInt(height.getText().toString());
@@ -93,26 +111,6 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
                     int res = (int) (49 + 1.7 * (0.394 * value - 60));
                     result.setText("Ваш идеальный вес " + Integer.toString(res) + " кг");
                 }
-            }
-        }
-        else {
-            if (height.getText().toString().equals("")){
-                tv_height.setTextColor(Color.parseColor("#FF0000"));
-            }
-            else {
-                tv_height.setTextColor(Color.parseColor("#808080"));
-            }
-            if (!(gender1.isChecked() || gender2.isChecked())){
-                tv_gender.setTextColor(Color.parseColor("#FF0000"));
-            }
-            else {
-                tv_gender.setTextColor(Color.parseColor("#808080"));
-            }
-            if (!(formula1.isChecked() || formula2.isChecked())){
-                tv_formula.setTextColor(Color.parseColor("#FF0000"));
-            }
-            else {
-                tv_formula.setTextColor(Color.parseColor("#808080"));
             }
         }
     }

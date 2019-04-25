@@ -46,8 +46,8 @@ public class JournalFragment extends Fragment {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
-                String date = df.format(Calendar.getInstance().getTime());
+               DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
+               String date = df.format(Calendar.getInstance().getTime());
                if (!date.equals(databaseHelper.getJournalDao().getPreviousDate(databaseHelper.getJournalDao().getDBSize()))) {
                     Fragment addFragment = new AddFragment();
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
