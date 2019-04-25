@@ -86,12 +86,12 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         if(!heightS.isEmpty() && !waistS.isEmpty() && !hipS.isEmpty() && !neckS.isEmpty()){
             switch (idGen) {
                 case R.id.radio_but_female:
-                    row1.setTextColor(getResources().getColor(R.color.colorText1));
-                    row2.setTextColor(getResources().getColor(R.color.colorText1));
-                    row3.setTextColor(getResources().getColor(R.color.colorText1));
-                    row4.setTextColor(getResources().getColor(R.color.colorText1));
+                    row1.setTextColor(getResources().getColor(R.color.textNav));
+                    row2.setTextColor(getResources().getColor(R.color.textNav));
+                    row3.setTextColor(getResources().getColor(R.color.textNav));
+                    row4.setTextColor(getResources().getColor(R.color.textNav));
 
-                    result.setTextColor(getResources().getColor(R.color.colorText1));
+                    result.setTextColor(getResources().getColor(R.color.textNav));
                     row1.setText("< 22%");
                     row2.setText("23%-34%");
                     row3.setText("35%-40%");
@@ -115,12 +115,12 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                     result.setVisibility(View.VISIBLE);
                     break;
                 case R.id.radio_but_male:
-                    row1.setTextColor(getResources().getColor(R.color.colorText1));
-                    row2.setTextColor(getResources().getColor(R.color.colorText1));
-                    row3.setTextColor(getResources().getColor(R.color.colorText1));
-                    row4.setTextColor(getResources().getColor(R.color.colorText1));
+                    row1.setTextColor(getResources().getColor(R.color.textNav));
+                    row2.setTextColor(getResources().getColor(R.color.textNav));
+                    row3.setTextColor(getResources().getColor(R.color.textNav));
+                    row4.setTextColor(getResources().getColor(R.color.textNav));
 
-                    result.setTextColor(getResources().getColor(R.color.colorText1));
+                    result.setTextColor(getResources().getColor(R.color.textNav));
                     row1.setText("< 8%");
                     row2.setText("9%-20%");
                     row3.setText("21%-25%");
