@@ -260,8 +260,9 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/rubik_mono_one"
             android:text="Результат"
+            android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="@color/textNav"
-            android:textSize="14sp"
             android:visibility="invisible" />
 
         <Button

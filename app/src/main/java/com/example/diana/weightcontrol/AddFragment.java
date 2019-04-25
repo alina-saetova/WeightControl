@@ -61,6 +61,11 @@ public class AddFragment extends Fragment {
                     if ((currentWeight > 30) && (currentWeight < 200)) {
                         note.setDate(date);
                         note.setWeight(currentWeight);
+                        SharedPreferences sp = getContext().getSharedPreferences("firstSettings",
+                                Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("weight", weight.getText().toString());
+                        editor.apply();
                         System.out.println(currentWeight + " " + previousWeight);
                         if (currentWeight - previousWeight > 0) {
                             String s = "+" + Math.round((currentWeight - previousWeight) * 100.0) / 100.0;
