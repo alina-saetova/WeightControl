@@ -3,6 +3,7 @@ package com.example.diana.weightcontrol;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -26,6 +27,7 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
     RadioGroup radioGroup;
     RadioButton radioBut1, radioBut2;
     TableLayout table;
+    TextView tvgender, tvweight, tvheight, tvwaist, tvhip, tvneck;
 
 
     @Override
@@ -42,6 +44,13 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         row2 = view.findViewById(R.id.row2);
         row3 = view.findViewById(R.id.row3);
         row4 = view.findViewById(R.id.row4);
+
+        tvgender = view.findViewById(R.id.gender);
+        tvweight = view.findViewById(R.id.weight);
+        tvheight = view.findViewById(R.id.height);
+        tvwaist = view.findViewById(R.id.waist);
+        tvhip = view.findViewById(R.id.hip);
+        tvneck = view.findViewById(R.id.neck);
 
         result = view.findViewById(R.id.text_result);
         radioGroup = view.findViewById(R.id.radio_group);
@@ -83,7 +92,37 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
 
         int idGen = radioGroup.getCheckedRadioButtonId();
 
-        if(!heightS.isEmpty() && !waistS.isEmpty() && !hipS.isEmpty() && !neckS.isEmpty()){
+        if (waistS.isEmpty()) {
+            tvwaist.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tvwaist.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if (heightS.isEmpty()) {
+            tvheight.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tvheight.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if (hipS.isEmpty()) {
+            tvhip.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tvhip.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if (neckS.isEmpty()) {
+            tvneck.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tvneck.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if (idGen == -1) {
+            tvgender.setTextColor(Color.parseColor("#FFEC5F5F"));
+        }
+        else {
+            tvgender.setTextColor(Color.parseColor("#A3362C2C"));
+        }
+        if(!heightS.isEmpty() && !waistS.isEmpty() && !hipS.isEmpty() && !neckS.isEmpty() && idGen != -1){
             switch (idGen) {
                 case R.id.radio_but_female:
                     row1.setTextColor(getResources().getColor(R.color.textNav));
@@ -99,7 +138,7 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                     table.setVisibility(View.VISIBLE);
                     percent = percentFatFemale(Integer.parseInt(heightS), Integer.parseInt(waistS),
                             Integer.parseInt(hipS), Integer.parseInt(neckS));
-                    result.setText("Процент жира в организме: " + String.valueOf(percent) + "%");
+                    result.setText("Процент жира в организме:\n " + String.valueOf(percent) + "%");
                     if (percent <= 22.0) {
                         row1.setTextColor(getResources().getColor(R.color.colorAccent));
                     }
@@ -146,7 +185,7 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
             }
         }
         else {
-            result.setText("Проверьте введенные данные и повторите попытку");
+            result.setText("Проверьте введенные данные\n и повторите попытку");
             result.setVisibility(View.VISIBLE);
         }
     }
