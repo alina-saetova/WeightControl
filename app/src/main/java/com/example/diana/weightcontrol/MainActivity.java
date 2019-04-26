@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity
 
     Fragment bFragment, calorCalcFragement, bodyFatPercentageFragment, idealWeightFragment;
     public final static String MY_SETTINGS = "mysettings";
-    Fragment jFragment;
+    Fragment jFragment, graphFrg;
     FragmentTransaction fragTrans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setBackgroundDrawableResource(R.drawable.calcs_background) ;
+        getWindow().setBackgroundDrawableResource(R.drawable.calcs_background);
         SharedPreferences sp = getSharedPreferences(MY_SETTINGS,
                 Context.MODE_PRIVATE);
         boolean hasVisited = sp.getBoolean("hasVisited", false);
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         bFragment = new BMIFragment();
+        graphFrg = new GraphFragmnent();
         calorCalcFragement = new CaloriesCalculatorFragment();
         bodyFatPercentageFragment = new BodyFatPercentage();
         idealWeightFragment = new IdealWeightFragment();
@@ -115,6 +116,7 @@ public class MainActivity extends AppCompatActivity
             fragTrans.replace(R.id.fragCont, jFragment);
         } else if (id == R.id.nav_graphic) {
             getSupportActionBar().setTitle("График изменений");
+            fragTrans.replace(R.id.fragCont, graphFrg);
         }
         fragTrans.commit();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
