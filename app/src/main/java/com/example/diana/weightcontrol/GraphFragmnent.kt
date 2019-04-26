@@ -39,14 +39,7 @@ class GraphFragmnent : Fragment() {
         var timeSet: ArrayList<String> = ArrayList()
         for (item in databaseHelper.journalDao.allData) {
             timeSet.add(item.date)
-            tempSet.add(Entry(item.id.toFloat(), item.weight.toFloat()))
-            tempSet.add(Entry(2f,84f))
-            tempSet.add(Entry(3f,83f))
-            tempSet.add(Entry(4f,81f))
-            tempSet.add(Entry(5f,80f))
-            tempSet.add(Entry(6f,76f))
-            tempSet.add(Entry(7f,86f))
-            tempSet.add(Entry(8f,88f))
+            tempSet.add(Entry(item.id.toFloat(), item.weight.toFloat()))           
         }
         var dataSet = LineDataSet(tempSet, "ВЕС")
         dataSet.fillAlpha = 110
