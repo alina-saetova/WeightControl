@@ -123,14 +123,14 @@ public class CaloriesCalculatorFragment extends Fragment implements View.OnClick
                 case R.id.rb_female:
                     switch (idF) {
                         case R.id.rb_harris:
-                            Long rskHarris = Math.round((447.593 + 9.247 * Integer.parseInt(weight)
+                            Long rskHarris = Math.round((447.593 + 9.247 * Double.parseDouble(weight)
                                     + 3.098 * Integer.parseInt(height)
                                     - 4.33 * Integer.parseInt(age))
                                     * act.get(activity));
                             res.setText("Рекомендуемое РСК: \n" + rskHarris.toString() + " калорий");
                             break;
                         case R.id.rb_mifflin:
-                            Long rskMifflin = Math.round((10 * Integer.parseInt(weight)
+                            Long rskMifflin = Math.round((10 * Double.parseDouble(weight)
                                     + 6.25 * Integer.parseInt(height)
                                     - 5 * Integer.parseInt(age)
                                     - 161)
@@ -142,14 +142,14 @@ public class CaloriesCalculatorFragment extends Fragment implements View.OnClick
                 case R.id.rb_male:
                     switch (idF) {
                         case R.id.rb_harris:
-                            Long rskHarris = Math.round((float)(88.362 + 13.397 * Integer.parseInt(weight)
+                            Long rskHarris = Math.round((float)(88.362 + 13.397 * Double.parseDouble(weight)
                                     + 4.799 * Integer.parseInt(height)
                                     - 5.677 * Integer.parseInt(age))
                                     * act.get(activity));
                             res.setText("Рекомендуемое РСК: \n"+ rskHarris.toString() + " калорий");
                             break;
                         case R.id.rb_mifflin:
-                            Long rskMifflin = Math.round((10 * Integer.parseInt(weight)
+                            Long rskMifflin = Math.round((10 * Double.parseDouble(weight)
                                     + 6.25 * Integer.parseInt(height)
                                     - 5 * Integer.parseInt(age)
                                     + 5)
@@ -159,6 +159,9 @@ public class CaloriesCalculatorFragment extends Fragment implements View.OnClick
                     }
                     break;
             }
+        }
+        else {
+            res.setText("Проверьте введенные данные и повторите попытку");
         }
 
     }

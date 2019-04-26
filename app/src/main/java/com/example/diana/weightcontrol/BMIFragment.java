@@ -144,8 +144,8 @@ public class BMIFragment extends Fragment implements View.OnClickListener {
         }
         if (!(height.getText().toString().equals("")) && !(weight.getText().toString().equals(""))) {
             int h = Integer.parseInt(height.getText().toString());
-            int w = Integer.parseInt(weight.getText().toString());
-            int index = ((w * 100 * 100) / (h * h));
+            double w = Double.parseDouble(weight.getText().toString());
+            double index = ((w * 100 * 100) / (h * h));
             if (index < 16) {
                 textView1.setTextColor(getResources().getColor(R.color.colorBmi));
                 warning.setText("");

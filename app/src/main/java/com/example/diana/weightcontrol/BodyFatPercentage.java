@@ -23,7 +23,7 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
     double heightInt, waistInt, hipInt, neckInt;
     double percent;
     Button button;
-    TextView result, row1, row2, row3, row4;
+    TextView result, row1, row2, row3, row4, text1, text2, text3, text4;
     RadioGroup radioGroup;
     RadioButton radioBut1, radioBut2;
     TableLayout table;
@@ -44,6 +44,10 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         row2 = view.findViewById(R.id.row2);
         row3 = view.findViewById(R.id.row3);
         row4 = view.findViewById(R.id.row4);
+        text1 = view.findViewById(R.id.text1);
+        text2 = view.findViewById(R.id.text2);
+        text3 = view.findViewById(R.id.text3);
+        text4 = view.findViewById(R.id.text4);
 
         tvgender = view.findViewById(R.id.gender);
         tvweight = view.findViewById(R.id.weight);
@@ -92,6 +96,14 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
 
         int idGen = radioGroup.getCheckedRadioButtonId();
 
+        row1.setTextColor(getResources().getColor(R.color.textNav));
+        row2.setTextColor(getResources().getColor(R.color.textNav));
+        row3.setTextColor(getResources().getColor(R.color.textNav));
+        row4.setTextColor(getResources().getColor(R.color.textNav));
+        text1.setTextColor(getResources().getColor(R.color.textNav));
+        text2.setTextColor(getResources().getColor(R.color.textNav));
+        text3.setTextColor(getResources().getColor(R.color.textNav));
+        text4.setTextColor(getResources().getColor(R.color.textNav));
         if (waistS.isEmpty()) {
             tvwaist.setTextColor(Color.parseColor("#FFEC5F5F"));
         }
@@ -125,10 +137,7 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
         if(!heightS.isEmpty() && !waistS.isEmpty() && !hipS.isEmpty() && !neckS.isEmpty() && idGen != -1){
             switch (idGen) {
                 case R.id.radio_but_female:
-                    row1.setTextColor(getResources().getColor(R.color.textNav));
-                    row2.setTextColor(getResources().getColor(R.color.textNav));
-                    row3.setTextColor(getResources().getColor(R.color.textNav));
-                    row4.setTextColor(getResources().getColor(R.color.textNav));
+
 
                     result.setTextColor(getResources().getColor(R.color.textNav));
                     row1.setText("< 22%");
@@ -140,25 +149,24 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                             Integer.parseInt(hipS), Integer.parseInt(neckS));
                     result.setText("Процент жира в организме:\n " + String.valueOf(percent) + "%");
                     if (percent <= 22.0) {
-                        row1.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text1.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row1.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     if ((percent >= 23.0) & (percent <= 34.0)) {
-                        row2.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text2.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row2.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     if ((percent >= 35.0) && (percent <= 40.0)) {
-                        row3.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text3.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row3.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     if (percent > 40.0) {
-                        row4.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text4.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row4.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     result.setVisibility(View.VISIBLE);
                     break;
                 case R.id.radio_but_male:
-                    row1.setTextColor(getResources().getColor(R.color.textNav));
-                    row2.setTextColor(getResources().getColor(R.color.textNav));
-                    row3.setTextColor(getResources().getColor(R.color.textNav));
-                    row4.setTextColor(getResources().getColor(R.color.textNav));
-
                     result.setTextColor(getResources().getColor(R.color.textNav));
                     row1.setText("< 8%");
                     row2.setText("9%-20%");
@@ -169,16 +177,20 @@ public class BodyFatPercentage extends Fragment implements View.OnClickListener 
                             Integer.parseInt(neckS));
                     result.setText("Процент жира в организме:\n " + String.valueOf(percent) + "%");
                     if (percent <= 8.0) {
-                        row1.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text1.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row1.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     if ((percent >= 9.0) & (percent <= 20.0)) {
-                        row2.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text2.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row2.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     if ((percent >= 21.0) && (percent <= 25.0)) {
-                        row3.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text3.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row3.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     if (percent > 25.0) {
-                        row4.setTextColor(getResources().getColor(R.color.colorAccent));
+                        text4.setTextColor(getResources().getColor(R.color.colorBmi));
+                        row4.setTextColor(getResources().getColor(R.color.colorBmi));
                     }
                     result.setVisibility(View.VISIBLE);
                     break;

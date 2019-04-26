@@ -38,7 +38,11 @@ public class MainActivity extends AppCompatActivity
             e.apply();
 
         }
+        jFragment = new JournalFragment();
 
+        fragTrans = getSupportFragmentManager().beginTransaction();
+        fragTrans.replace(R.id.fragCont, jFragment);
+        fragTrans.commit();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -56,7 +60,6 @@ public class MainActivity extends AppCompatActivity
         calorCalcFragement = new CaloriesCalculatorFragment();
         bodyFatPercentageFragment = new BodyFatPercentage();
         idealWeightFragment = new IdealWeightFragment();
-        jFragment = new JournalFragment();
     }
 
     @Override

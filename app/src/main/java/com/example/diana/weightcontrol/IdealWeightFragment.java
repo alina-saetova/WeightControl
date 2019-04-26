@@ -113,6 +113,9 @@ public class IdealWeightFragment extends Fragment implements View.OnClickListene
                 }
             }
         }
+        else {
+            result.setText("Проверьте введенные данные и повторите попытку");
+        }
     }
 
 }
